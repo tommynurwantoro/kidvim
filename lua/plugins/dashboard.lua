@@ -1,73 +1,27 @@
+local logo = [[
+KKKKKKKKK    KKKKKKK IIIIIIIIII DDDDDDDDDDDDD        VVVVVVVV           VVVVVVVV IIIIIIIIII MMMMMMMM               MMMMMMMM
+K:::::::K    K:::::K I::::::::I D::::::::::::DDD     V::::::V           V::::::V I::::::::I M:::::::M             M:::::::M
+K:::::::K    K:::::K I::::::::I D:::::::::::::::DD   V::::::V           V::::::V I::::::::I M::::::::M           M::::::::M
+K:::::::K   K::::::K II::::::II DDD:::::DDDDD:::::D  V::::::V           V::::::V II::::::II M:::::::::M         M:::::::::M
+KK::::::K  K:::::KKK   I::::I     D:::::D    D:::::D  V:::::V           V:::::V    I::::I   M::::::::::M       M::::::::::M
+  K:::::K K:::::K      I::::I     D:::::D     D:::::D  V:::::V         V:::::V     I::::I   M:::::::::::M     M:::::::::::M
+  K::::::K:::::K       I::::I     D:::::D     D:::::D   V:::::V       V:::::V      I::::I   M:::::::M::::M   M::::M:::::::M
+  K:::::::::::K        I::::I     D:::::D     D:::::D    V:::::V     V:::::V       I::::I   M::::::M M::::M M::::M M::::::M
+  K:::::::::::K        I::::I     D:::::D     D:::::D     V:::::V   V:::::V        I::::I   M::::::M  M::::M::::M  M::::::M
+  K::::::K:::::K       I::::I     D:::::D     D:::::D      V:::::V V:::::V         I::::I   M::::::M   M:::::::M   M::::::M
+  K:::::K K:::::K      I::::I     D:::::D     D:::::D       V:::::V:::::V          I::::I   M::::::M    M:::::M    M::::::M
+KK::::::K  K:::::KKK   I::::I     D:::::D    D:::::D         V:::::::::V           I::::I   M::::::M     MMMMM     M::::::M
+K:::::::K   K::::::K II::::::II DDD:::::DDDDD:::::D           V:::::::V          II::::::II M::::::M               M::::::M
+K:::::::K    K:::::K I::::::::I D:::::::::::::::DD             V:::::V           I::::::::I M::::::M               M::::::M
+K:::::::K    K:::::K I::::::::I D::::::::::::DDD                V:::V            I::::::::I M::::::M               M::::::M
+KKKKKKKKK    KKKKKKK IIIIIIIIII DDDDDDDDDDDDD                    VVV             IIIIIIIIII MMMMMMMM               MMMMMMMM
+    ]]
+
 return {
-  {
-    "catppuccin/nvim",
-    lazy = true,
-    name = "catppuccin",
-    opts = {
-      integrations = {
-        aerial = true,
-        alpha = true,
-        cmp = true,
-        dashboard = true,
-        flash = true,
-        gitsigns = true,
-        headlines = true,
-        illuminate = true,
-        indent_blankline = { enabled = true },
-        leap = true,
-        lsp_trouble = true,
-        mason = true,
-        markdown = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
-          },
-        },
-        navic = { enabled = true, custom_bg = "lualine" },
-        neotest = true,
-        neotree = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = true,
-        treesitter = true,
-        treesitter_context = true,
-        which_key = true,
-      },
-    },
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    opts = {
-      window = {
-        position = "right",
-      },
-    },
-  },
   {
     "nvimdev/dashboard-nvim",
     event = "VimEnter",
     opts = function()
-      local logo = [[
-██╗░░██╗██╗██████╗░██╗░░░██╗██╗███╗░░░███╗
-██║░██╔╝██║██╔══██╗██║░░░██║██║████╗░████║
-█████═╝░██║██║░░██║╚██╗░██╔╝██║██╔████╔██║
-██╔═██╗░██║██║░░██║░╚████╔╝░██║██║╚██╔╝██║
-██║░╚██╗██║██████╔╝░░╚██╔╝░░██║██║░╚═╝░██║
-╚═╝░░╚═╝╚═╝╚═════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
-    ]]
-
       logo = string.rep("\n", 8) .. logo .. "\n\n"
 
       local opts = {
