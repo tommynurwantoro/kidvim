@@ -39,6 +39,17 @@ return {
         treesitter_context = true,
         which_key = true,
       },
+      transparent_background = true,
+    },
+  },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
   },
   {
